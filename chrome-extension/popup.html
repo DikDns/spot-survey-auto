@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Auto Filler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📝 Survey Auto Filler</h1>
+      <p class="subtitle">Isi survey secara otomatis dengan jawaban random</p>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="stat-item">
+        <span class="stat-label">Total Pertanyaan:</span>
+        <span class="stat-value" id="totalQuestions">-</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Sudah Dijawab:</span>
+        <span class="stat-value" id="answeredQuestions">-</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Belum Dijawab:</span>
+        <span class="stat-value" id="unansweredQuestions">-</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="fillUnansweredBtn" class="btn btn-primary">
+        ✨ Isi Jawaban Kosong
+      </button>
+      <button id="fillAllBtn" class="btn btn-secondary">
+        🔄 Isi Semua (Overwrite)
+      </button>
+      <button id="refreshStatsBtn" class="btn btn-outline">
+        🔍 Refresh Statistik
+      </button>
+    </div>
+
+    <div class="result" id="result"></div>
+
+    <div class="footer">
+      <p class="warning">⚠️ Pastikan Anda berada di halaman survey UPI</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

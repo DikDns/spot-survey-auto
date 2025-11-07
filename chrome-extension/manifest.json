@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Survey Auto Filler",
+  "version": "1.0.0",
+  "description": "Otomatis mengisi jawaban random untuk survey UPI",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://survey.upi.edu/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Survey Auto Filler"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://survey.upi.edu/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
